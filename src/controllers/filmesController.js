@@ -23,3 +23,20 @@ exports.getGenero = (req, res) => {
     const genero = filmes.filter(item => item.genero.indexOf(generoNome) > -1)
     res.status(200).send(genero)
 }
+
+function transformaDataLanc(data) {
+    const dataLancSplitada = data.split('/');
+    const novaDataLanc = new Date(dataLancSplitada[2], dataLancSplitada[1] - 1, dataLancSplitada[0]);
+
+    return novaDataLanc
+}
+
+
+exports.getLancamento = (req, res) => {
+    filmes.forEach(item => item.dtLancamento = transformaDataLanc(item.dtLancamento))
+
+    const hoje = new Date();
+    const lancamentos = filmes.filter(item => item.dtLancamento > hoje)
+
+    res.status(200).send(lancamentos)
+}
