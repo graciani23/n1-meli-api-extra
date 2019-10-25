@@ -34,7 +34,10 @@ const filmes =
     }
 ]
 
-const filmeGenero = filmes.filter(item => item.duracao > 120)
+const filmeDuracao = filmes.filter(item => item.duracao > 120)
+filmeDuracao.map(item => {
+    console.log(item.titulo)
+})
 
-console.log(filmeGenero)
+
 

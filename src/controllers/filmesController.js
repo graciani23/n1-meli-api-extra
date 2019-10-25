@@ -12,8 +12,13 @@ exports.getById = (req, res) => {
     
     res.status(200).send(respId)
 }
+ exports.getDuracao = (req, res) => {
+    const filmeDuracao = filmes.filter(item => item.duracao > 120)
+
+    res.status(200).send(filmeDuracao.map(item => item.titulo))
+ }
 
 exports.getGenero = (req, res) => {
-    const genero = filmes.filter(item => item.genero)
+    const genero = filmes.filter(item => item.genero == genero)
     res.status(200).send(genero.genero)
 }
