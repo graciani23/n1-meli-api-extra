@@ -21,7 +21,7 @@
         "sinopse": " Woody Harrelson, Jesse Eisenberg, Emma Stone",
         "dtLancamento": "10-24-2019",
         "duracao": "124",
-        "genero": ["comédia", "terror", "ação"]
+        "genero": ["comedia", "terror", "acao"]
         },
     {
         "id": "4",
@@ -29,6 +29,6 @@
         "sinopse": "Will Smith, Mary Elizabeth Winstead, Clive Owen",
         "dtLancamento": "10-10-2019",
         "duracao": "117",
-        "genero": ["ação", "fição"]
+        "genero": ["acao", "ficcao"]
     }
 ]

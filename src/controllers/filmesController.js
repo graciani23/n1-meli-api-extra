@@ -19,6 +19,7 @@ exports.getById = (req, res) => {
  }
 
 exports.getGenero = (req, res) => {
-    const genero = filmes.filter(item => item.genero == genero)
-    res.status(200).send(genero.genero)
+    const generoNome = req. params.nome
+    const genero = filmes.filter(item => item.genero.indexOf(generoNome) > -1)
+    res.status(200).send(genero)
 }
